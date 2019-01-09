@@ -35,6 +35,7 @@ export default class OrderBook extends React.PureComponent<OrderBookProps> {
     return this.props.midpoint ? (
       <div className="wrapper">
         <div className="order-book">
+          <div className="title">BTC-USD</div>
           <div className="column-header">
             <div>Price (USD)</div>
             <div>Market Size</div>
@@ -46,6 +47,26 @@ export default class OrderBook extends React.PureComponent<OrderBookProps> {
               .toFixed(3)
               .toString()
               .replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")}
+            {this.props.percentageChange ? (
+              <div
+                className={
+                  this.props.percentageChange > 0
+                    ? "positive"
+                    : this.props.percentageChange < 0
+                    ? "negative"
+                    : undefined
+                }
+              >
+                {this.props.percentageChange > 0
+                  ? "+"
+                  : this.props.percentageChange < 0
+                  ? "-"
+                  : undefined}
+                {this.props.percentageChange.toFixed(2)}%
+              </div>
+            ) : (
+              undefined
+            )}
           </div>
           <div className="bids">{bids}</div>
         </div>

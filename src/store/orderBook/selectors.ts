@@ -2,6 +2,7 @@ import { bind } from "../bind";
 import { ISideState, ILevel, Side } from "./state";
 import { IApplicationState } from "../state";
 import { createSelector } from "reselect";
+import { IStats } from "../../api/stats/model";
 
 export default class NavigatorSelectors {
   private readonly levelsToShow = 20;
@@ -79,4 +80,9 @@ export default class NavigatorSelectors {
       }
     )
   );
+
+  public readonly getStats = bind<
+    IStats | null,
+    (state: IApplicationState) => IStats | null
+  >(this, (state: IApplicationState) => this.getState(state).stats);
 }

@@ -3,6 +3,7 @@ import { ISideState, IOrderBookState } from "./state";
 import { combineReducers } from "redux";
 import { ActionType } from "../../types";
 import { Level, Change } from "../../components/GdaxClient/model";
+import { IStats } from "../../api/stats/model";
 
 const bids = (
   state: ISideState | null = null,
@@ -36,9 +37,22 @@ const asks = (
   }
 };
 
+const stats = (
+  state: IStats | null = null,
+  action: AppAction
+): IStats | null => {
+  switch (action.type) {
+    case ActionType.GDAX_CLIENT_UPDATE_STATS:
+      return action.payload.stats;
+    default:
+      return state;
+  }
+};
+
 export default combineReducers<IOrderBookState>({
   bids,
-  asks
+  asks,
+  stats
 });
 
 function parseSide(side: Array<Level>, isAscending: boolean): ISideState {

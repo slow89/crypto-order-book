@@ -1,10 +1,12 @@
 import {
   LoadOrderBookSnapshot,
   UpdateOrderBookAsks,
-  UpdateOrderBookBids
+  UpdateOrderBookBids,
+  UpdateStats
 } from "./store/orderBook/actions";
 
 export type AppAction =
   | LoadOrderBookSnapshot
   | UpdateOrderBookAsks
-  | UpdateOrderBookBids;
+  | UpdateOrderBookBids
+  | UpdateStats;

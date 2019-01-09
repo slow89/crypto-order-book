@@ -2,11 +2,19 @@ import React from "react";
 import { GdaxClientProps } from "./props";
 import connect from "./connector";
 import { Change } from "./model";
+import { Stats } from "../../api/stats";
 
 export default class GdaxClient extends React.PureComponent<GdaxClientProps> {
   public static readonly connected = connect(GdaxClient);
 
+  constructor(props: GdaxClientProps) {
+    super(props);
+    this.getStats = this.getStats.bind(this);
+  }
+
   componentDidMount() {
+    this.getStats();
+
     const websocket = new WebSocket("wss://ws-feed.pro.coinbase.com");
 
     websocket.addEventListener("message", event => {
@@ -50,6 +58,15 @@ export default class GdaxClient extends React.PureComponent<GdaxClientProps> {
     websocket.addEventListener("error", error => {
       console.log(error);
     });
+
+    setInterval(this.getStats, 60000);
+  }
+
+  private async getStats() {
+    const stats = await Stats.get(
+      "https://api.pro.coinbase.com/products/BTC-USD/stats"
+    );
+    this.props.updateStats(stats);
   }
 
   render() {
