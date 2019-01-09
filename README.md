@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Bitcoin Orderbook Widget
 
-This project uses the api from [Coinabes Pro](https://pro.coinbase.com/) to display prices in realtime.
+This project uses the api from [Coinabes Pro](https://pro.coinbase.com/) to display an orderbook realtime.
 
 ### `React Native`
 
