@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "BTC Order Book",
+  "name": "Bitcoin Order Book",
   "icons": [
     {
       "src": "favicon.ico",
