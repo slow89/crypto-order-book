@@ -1,6 +1,6 @@
 import { IApplicationState } from "./state";
 
-export function bind<R, T extends (state: IApplicationState) => R>(
+export function bind<R, T extends (state: IApplicationState) => R | null>(
   target: any,
   func: T
 ) {
