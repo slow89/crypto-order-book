@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/crypto-order-book/precache-manifest.ed85a92467e82b192784a8e8b3cb40c2.js"
+  "/crypto-order-book/precache-manifest.cd4a6e5e859e6c506ba470f5b9988c5e.js"
 );
 
 workbox.clientsClaim();

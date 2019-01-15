@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "7e052d715d2cf59a524d",
+    "revision": "2899e320cb607a536ed6",
     "url": "/crypto-order-book/static/css/main.db9f2636.chunk.css"
   },
   {
-    "revision": "7e052d715d2cf59a524d",
-    "url": "/crypto-order-book/static/js/main.7e052d71.chunk.js"
+    "revision": "2899e320cb607a536ed6",
+    "url": "/crypto-order-book/static/js/main.2899e320.chunk.js"
   },
   {
     "revision": "1e7a82d0965d0443de15",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/crypto-order-book/static/js/runtime~main.8db1895b.js"
   },
   {
-    "revision": "bf86dd5998ddecde9724d914035581f6",
+    "revision": "606873faade698b4947f44a6aa07ebfe",
     "url": "/crypto-order-book/index.html"
   }
 ];
