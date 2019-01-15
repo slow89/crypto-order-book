@@ -1,13 +1,13 @@
 {
   "main.css": "/crypto-order-book/static/css/main.db9f2636.chunk.css",
-  "main.js": "/crypto-order-book/static/js/main.11916d60.chunk.js",
-  "main.js.map": "/crypto-order-book/static/js/main.11916d60.chunk.js.map",
+  "main.js": "/crypto-order-book/static/js/main.7e052d71.chunk.js",
+  "main.js.map": "/crypto-order-book/static/js/main.7e052d71.chunk.js.map",
   "static/js/1.1e7a82d0.chunk.js": "/crypto-order-book/static/js/1.1e7a82d0.chunk.js",
   "static/js/1.1e7a82d0.chunk.js.map": "/crypto-order-book/static/js/1.1e7a82d0.chunk.js.map",
   "runtime~main.js": "/crypto-order-book/static/js/runtime~main.8db1895b.js",
   "runtime~main.js.map": "/crypto-order-book/static/js/runtime~main.8db1895b.js.map",
   "static/css/main.db9f2636.chunk.css.map": "/crypto-order-book/static/css/main.db9f2636.chunk.css.map",
   "index.html": "/crypto-order-book/index.html",
-  "precache-manifest.6fc6a306ac71894f1b2a669f15bbaf47.js": "/crypto-order-book/precache-manifest.6fc6a306ac71894f1b2a669f15bbaf47.js",
+  "precache-manifest.ed85a92467e82b192784a8e8b3cb40c2.js": "/crypto-order-book/precache-manifest.ed85a92467e82b192784a8e8b3cb40c2.js",
   "service-worker.js": "/crypto-order-book/service-worker.js"
 }
