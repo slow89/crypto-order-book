@@ -9,7 +9,7 @@ import {
   UpdateStats
 } from "../../store/orderBook/actions";
 
-export default connect<null, IGdaxClientOutputProps, {}, IApplicationState>(
+export default connect<null, IGdaxClientOutputProps, any, IApplicationState>(
   null,
   (dispatch: any) => ({
     loadSnapshot: snapshot => dispatch(LoadOrderBookSnapshot.create(snapshot)),

@@ -1,5 +1,4 @@
 import { ILevel } from "../../store/orderBook/state";
-import { IStats } from "../../api/stats/model";
 
 export interface IOrderBookInputProps {
   bids: Array<ILevel> | null;

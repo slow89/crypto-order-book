@@ -27,7 +27,7 @@ export default class GdaxClient extends React.PureComponent<GdaxClientProps> {
           break;
         case "l2update":
           data.changes.forEach((e: Change) => {
-            if (e[0] == "buy") {
+            if (e[0] === "buy") {
               this.props.updateBids(e);
             } else {
               this.props.updateAsks(e);

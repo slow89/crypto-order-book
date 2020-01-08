@@ -2,15 +2,10 @@ import { connect } from "react-redux";
 
 import { IOrderBookInputProps } from "./props";
 import { IApplicationState } from "../../store/state";
-import {
-  LoadOrderBookSnapshot,
-  UpdateOrderBookAsks,
-  UpdateOrderBookBids
-} from "../../store/orderBook/actions";
 
 import selectors from "../../store/selectors";
 
-export default connect<IOrderBookInputProps, null, {}, IApplicationState>(
+export default connect<IOrderBookInputProps, null, any, IApplicationState>(
   state => {
     const bids = selectors.orderBook.getTopBids(state);
     const asks = selectors.orderBook.getTopAsks(state);

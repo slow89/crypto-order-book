@@ -57,9 +57,7 @@ export default class OrderBook extends React.PureComponent<OrderBookProps> {
                     : undefined
                 }
               >
-                {this.props.percentageChange > 0
-                  ? "+"
-                  : undefined}
+                {this.props.percentageChange > 0 ? "+" : undefined}
                 {this.props.percentageChange.toFixed(2)}%
               </div>
             ) : (

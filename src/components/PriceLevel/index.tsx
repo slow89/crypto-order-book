@@ -6,7 +6,7 @@ import { Side } from "../../store/orderBook/state";
 export default class PriceLevel extends React.PureComponent<PriceLevelProps> {
   render() {
     let classes =
-      this.props.level.side == Side.Bid ? "bid level " : "ask level ";
+      this.props.level.side === Side.Bid ? "bid level " : "ask level ";
 
     if (this.props.last) {
       classes += "last";
@@ -14,7 +14,7 @@ export default class PriceLevel extends React.PureComponent<PriceLevelProps> {
     const style = this.props.totalSize
       ? {
           backgroundColor:
-            this.props.level.side == Side.Bid
+            this.props.level.side === Side.Bid
               ? "rgba(92, 160, 81, " +
                 this.props.level.size / this.props.totalSize +
                 ")"

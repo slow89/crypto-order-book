@@ -15,7 +15,6 @@ const bids = (
     case ActionType.GDAX_CLIENT_UPDATE_BID:
       let nState = state ? { ...state } : null;
       return updateSide(action.payload.change, nState, false);
-    case ActionType.GDAX_CLIENT_UPDATE_BID:
 
     default:
       return state;
@@ -78,7 +77,7 @@ function updateSide(
   side: ISideState | null,
   isAscending: boolean
 ): ISideState | null {
-  if (side == null) {
+  if (side === null) {
     console.error("Update Side was recieved before a snapshot");
     return null;
   }
@@ -86,7 +85,7 @@ function updateSide(
   const level = parseFloat(update[1]);
   const index = side.order.indexOf(level, 0);
 
-  if (update[2] == "0") {
+  if (parseFloat(update[2]) === 0) {
     delete side.values[level.toFixed(2).toString()];
 
     if (index > -1) {
@@ -97,7 +96,7 @@ function updateSide(
   } else {
     side.values[level.toFixed(2).toString()] = parseFloat(update[2]);
 
-    if (index == -1) {
+    if (index === -1) {
       let order = side.order.slice();
       order.push(level);
       side.order = sort(order, isAscending);
